@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastering HTML : A Complete Student's Guide</title>
+  </head>
+  <body>
+    <!-- the header section for navigation -->
+    <header>
+      <h1>Web Development Masterclass</h1>
+      <nav aria aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#links">links</a></li>
+          <li><a href="#media">media</a></li>
+          <li><a href="#tables">tables</a></li>
+          <li><a href="#forms">forms</a></li>
+          <li><a href="mailto:kipngeno7180@gmail.com">email instructor</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="links">
+        <h2>1. Navigation and pathing</h2>
+        <p>
+          <strong>absolute link</strong> points to an external site.
+          <a href="https://zinduaschool.com" target="_blank"> learn more</a>
+        </p>
+
+        <p>
+          <strong> relative link</strong> points to a resource within the the same website
+          <a href="index.html>">home page</a>
+
+        </p>
+        <p> <strong> internal link</strong> points to an internal resource
+          <a href="specialized">jump to date and colour picker</a>
+        </p>
+
+        </section>
+        <!-- multimedia -->
+        <section id=" media">
+          <h2> multimedia and responsive graphics</h2>
+          <h3>responsive images</h3>
+          <p> the browser chooses the best image based on the device width </p>
+          <img src="assets/images/gabriel-heinzer-g5jpH62pwes-unsplash.jpg"
+              srcset="assets/images/gabriel-heinzer-g5jpH62pwes-unsplash.jpg 300w, assets/images/chris-ried-ieic5Tq8YMk-unsplash.jpg 800w "
+              sizes="(max width: 600px) 100vw, 50vw"
+              alt="lines of html code" width="300px" height="300px">
+
+          <h3>image maps</h3>
+          <img src="assets/images/nasa-ErjNGXc9mqA-unsplash.jpg"
+          usemap="#spacemap"
+           alt="space"
+           width="800" 
+           height="500">
+           <map name="spacemap">
+            <!-- rectangle area(x1, y1, x2, y2)-->
+            <area shape="rect" 
+            coords="34,44,270 350" 
+            href="https://zinduaschool.com" 
+            target="_blank"
+            alt="coding school">
+            <!-- circular area (x, y, radius) -->
+            <area shape="circle" 
+            coords="337, 300, 44" 
+            href="https://google.com" 
+            target="_blank"
+            alt="search">
+           </map>
+           <!-- video and audio-->
+            <h3>Audio & Video Players</h3>
+            <audio controls style="width: 100%; margin-bottom: 10px;">
+                <source src="" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+
+            <!-- The 'poster' attribute below adds the thumbnail image -->
+            <video width="100%" controls poster="./assets/images/mohammad-rahmani-oXlXu2qukGE-unsplash.jpg">
+                <source src="ASSETS/assets/cybersecurity.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+      </section>
+    </main>
+  </body>
+</html>
