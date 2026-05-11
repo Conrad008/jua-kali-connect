@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mastering HTML : A Complete Student's Guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
     <!-- the header section for navigation -->
@@ -80,6 +81,78 @@
                 Your browser does not support the video tag.
             </video>
       </section>
+      <section id="forms">
+        <h2>interactive forms and Validation</h2>
+        <form action="#" method="post" enctype="multipart/form-data"> f
+          <fieldset>
+            <legend> <strong>Student Registration</strong></legend>
+            <div class="form-group">
+              <label for="fname">full name</label>
+               <input type="text" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="DOB">Date of Birth</label>
+              <input type="date" required>
+            </div>
+            <div class="form-group">
+              <label for="uemail">Email Address</label>
+              <input type="email" id="email" name="uemail" required>
+              <p><strong>preffered track</strong></p>
+              <input type="radio" id="front" name="track" value="frontend" checked>
+              <label for="front">frontend</label>
+              <input type="radio" id="back" name="track" value="backend">
+              <label for="back">backend</label>
+            </div>
+            <div class="form-group">
+              <label for="referral"> <strong>How Did You Hear About Us</strong></label>
+              <Select id="referral" style="width: 10%;" padding: 8px;>
+                <option value="disabled option">select an option</option>
+                <option value="social media">social media</option>
+                <option value="friend">friend/colleague</option>
+                <option value="search">search engine</option>
+                <option value="other">other</option>
+              </Select>
+              <div class="HOBBIES">
+                <label for="HOBBIES"><strong>Select your hobby</strong></label> <br>
+                <input type="checkbox" id="Hobby1" name="option" value="swimming">
+                <label for="Hobby1">swimming</label> <br>
+                <input type="checkbox" id="Hobby2" name="option" value="drawing">
+                <label for="Hobby2">drawing</label> <br>
+                <input type="checkbox" id="Hobby3" name="option" value="Reading Books">
+                <label for="Hobby3">Reading books</label> <br>
+
+              </div>
+              <label for="password"><strong>password</strong></label>
+              <input type="password" placeholder="enter your password" required>
+              <div class="form-group">
+                <label for="color">choose profile colour</label>
+                <input type="color" id="color" name="color" value="#3498db">
+
+              </div>
+              <div class="form-group">
+                <label for="progress"> prior experirnce (o-100)</label>
+                <input type="range" id="progress" name="progress" min="0" max="100" step="5">
+              </div>
+              <div class="form-group">
+                <label for="comments">Membership goals</label>
+                <textarea name="comments"
+                 id="comments" 
+                 rows="10" cols="100" 
+                 placeholder="tell us what you'd like to achive..."></textarea>
+              </div>
+                <input type="submit">
+          </fieldset> 
+        </form>
+      </section>
     </main>
+    <footer>
+      <div class="social-links">
+                <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+       </div>
+      <p>&copy; 2026. All rights reserved</p>
+    </footer>
   </body>
 </html>
