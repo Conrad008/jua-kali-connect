@@ -1,72 +1,216 @@
-# BYTEMIND — Corporate Landing Page
+## Jua Kali Connect
 
-A high-performance, accessible, and SEO-optimized landing page for BYTEMIND,tech consultancy based in Nairobi. This project demonstrates advanced HTML5 semantic structuring, multimedia integration, and modern Git workflows.
+**Overview**
 
-## Live Demo
+Jua Kali Connect is a full-stack digital platform designed to empower artisans, small-scale fabricators and informal sector businesses (Jua Kali) by providing tools for managing operations, connecting with customers and streamlining processes.
 
-[View Live Site on GitHub Pages](https://github.com-Conrad.008.github.io/BYTEMIND)
+The system bridges the gap between traditional craftsmanship and modern technology by offering features such as job tracking, customer management, inventory control, and digital payments.
 
-## Project Brief
+**Features**
 
-The objective was to create a professional web presence that effectively communicates a company's value proposition. This project simulates a real-world client hand-off, emphasizing cross-browser compatibility and mobile-first responsiveness.
+User Management
+- User registration and authentication
+- Role-based access (Admin, Artisan, Customer)
+- Profile management
 
-### Key Features
+Inventory Management
+- Track raw materials and finished goods
+- Low stock alerts
+- Category-based organization
 
-* *Semantic HTML5 Architecture*: Utilization of <header>, <main>, <section>, and <footer> for improved SEO and screen reader accessibility.
+Order & Job Tracking
+- Create and manage customer orders
+- Track job progress (Pending → In Progress → Completed)
+- Assign jobs to artisans
+
+Payments Integration
+- M-Pesa integration for seamless payments
+- Payment status tracking
+- Transaction history
+
+Communication
+- Real-time chat between customers and artisans
+- Notifications for updates and messages
+
+Dashboard & Analytics
+- Admin dashboard with system overview
+- Business insights (sales, orders, revenue)
+- Activity logs
+
+Tech Stack
+
+**Frontend**
+- React.js
+- Tailwindcss
+- Axios
+- Redux 
+
+**Backend**
+- Django
+- django Rest Framework (DRF)
+- PostgreSQL
+
+**DevOps & Deployment**
+- Docker
+- Github Actions (CI/CD)
+- CloudHosting (AWS / Render / Azure )
+
+Project Structure
+
+text
+jua-kali-connect/
+│
+├── frontend/                # React application
+│   ├── src/
+│   ├── components/
+│   └── pages/
+│
+├── backend/                # Django application
+│   ├── apps/
+│   ├── models/
+│   ├── views/
+│   └── api/
+│
+├── docker/                 # Docker configurations
+├── docs/                   # Documentation
+├── .env.example            # Environment variables template
+├── requirements.txt
+├── package.json
+└── README.md
 
 
-* *Interactive Navigation*: A persistent header with internal links for seamless section jumping.
 
+Installation & Setup
 
-* *Accessible Media*: Responsive images using srcset and inclusive alt-text for all visual assets.
-
-
-* *Validated Lead Generation*: A robust contact form using HTML5 constraints including email validation, required fields, and pattern matching.
-
-
-* *Optimized Performance*: Implementation of loading="lazy" for images and proper document outlining.
-
-
-
-## Technologies Used
-
-* *HTML5*: Semantic markup and form validation.
-* *Git/GitHub*: Feature-based branching and version control.
-* *GitHub Pages*: Automated CI/CD deployment.
-
-## Setup and Installation
-
-1. *Clone the Repository*
 bash
-git clone https://github.com/Conrad.008/BYTEMIND-landing-page.git
+git clone https://github.com/Conrad.008/jua-kali-connect.git
+
+cd jua-kali-connect
+
+Open index.html in any modern browser and view your site
+
+Prerequisites
+
+* Node.js (v16+)
+* Python (v3.10+)
+* PostgreSQL
+* Docker (optional)
+
+Backend Setup (Django)
+
+**Bash**
+
+# Clone repository
+git clone [https://github.com/Conrad.008/jua-kali-connect.git](https://github.com/Conrad.008/jua-kali-connect.git)
+
+cd jua-kali-connect/backend
+
+# Create virtual environment
+python -m venv env
+source env/bin/activate   # Windows: env\\Scripts\\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure environment variables
+cp .env.example .env
+
+# Run migrations
+python manage.py migrate
+
+# Start server
+python manage.py runserver
 
 
+Frontend Setup (React)
+
+**Bash**
+
+cd ../frontend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+![ website ](assets/images/photo-1775312766921-61f840e3d6f8.avif)
 
 
-2. *Navigate to the Directory*
+API Endpoints
 
-bash
-   cd techvision-landing-page
+| **Methods** | **Endpoints** | **Description** |
+| ------------- | ------------- | ------------- |
+| POST           | api/auth/register/ | Register user|
+| POST           | api/auth/login/ | Login user|
+| GET           | api/orders/ | List Orders|
+| POST           | api/orders/ | Create order|
+| GET           | api/inventory/ | View Inventory |
+
+Environment Variables
+
+Create a .env file in both frontend and backend directories:
+
+Backend
+
+**Plaintext**
+
+SECRET_KEY=your_secret_key
+DEBUG=True
+DB_NAME=jua_kali_db
+DB_USER=postgres
+DB_PASSWORD=your_password
+MPESA_CONSUMER_KEY=your_key
+MPESA_CONSUMER_SECRET=your_secret
 
 
+Frontend
 
-3. *Launch the Project*
-* Open index.html directly in any modern browser.
-* Alternatively, use the *Live Server* extension in VS Code for real-time updates.
+**Plaintext**
+
+REACT_APP_API_URL=http://localhost:8000/api
 
 
-## Git Workflow
+Testing
 
-This project adheres to a professional branching strategy to maintain code integrity:
+**Bash**
 
-* *main*: The production-ready codebase.
-* *develop*: The integration branch for new features.
-* *feature/section-name*: Individual branches created for specific sections (e.g., feature/contact-form) to ensure clean commit histories.
+# Backend tests
+python manage.py test
 
-## Business Rationale
+# Frontend tests
+npm test
 
-To ensure maximum conversion, the page is structured with a "Hero-Service-Trust" hierarchy. By prioritizing accessibility and mobile responsiveness, we reduce bounce rates and ensure the site is usable for the widest possible audience, regardless of device or ability.
 
-## Author
+Deployment
 
-*Conrad Kipngeno*
+1. **Build frontend:** npm run build
+2. **Use Docker for full-stack deployment:** docker-compose up --build
+3. **Deploy on:**
+   * AWS (EC2 / S3)
+   * Azure
+   * Render / Vercel (frontend)
+
+Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a new branch (`feature/your-feature`)
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
+
+License
+
+This project is licensed under the MIT License.
+
+Author
+
+**Conrad Kipngeno**
+
+* GitHub: https://github.com/Conrad.008
+* Email: your-email kipngeno7180@gmail.com
+
+Vision
+
+To digitize and empower the Jua Kali sector by providing accessible, scalable, and efficient software solutions that enhance productivity and market reach.
